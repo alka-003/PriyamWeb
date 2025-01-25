@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elderly Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+    
+<body>
+    <header>
+       
+        <h1>​<strong>പ്രിയം!</strong></h1><img src="img.crp.png"/><br>
+            <select id="language-select">
+            <option value="en">English</option>1
+            <option value="ml">Malayalam</option>
+            <img src="/img_2.png"/ class="size-img">  
+        </select>
+        
+    </header>
+    
+    <button class="sos-button" onclick="sendSOS()">SOS</button>
+        
+    <audio controls> 
+        <source src="audio.mp3">
+    </audio>
+
+    <nav>
+  
+        <button id="documents-btn" onclick="displayDocuments">Documents</button>
+        <button id="reminders-btn">Reminders</button>
+        <button id="quote-btn" onclick=displayDailyQuote()>Daily Quote</button>
+        <button id="location-btn" onclick="displayNearbyCenters()">Nearby Centers</button>
+    </nav>
+
+    <main>
+        <section id="documents" class="hidden">
+            <h2>Important Documents</h2>
+            <div id="document-list"></div>
+            <form id="document-form">
+                <input type="text" id="doc-name" placeholder="Document Name" required>
+                <input type="file" id="doc-file" required>
+                <button type="submit">Save Document</button>
+            </form>
+        </section>
+
+
+        <section id="reminders" class="hidden">
+            <h2>Reminders</h2>
+            <div id="reminder-list"></div>
+            <form id="reminder-form">
+                <input type="text" id="reminder-text" placeholder="Reminder Text" required>
+                <input type="datetime-local" id="reminder-time" required>
+                <button type="submit">Add Reminder</button>
+            </form>
+        </section>
+
+        <section id="quote"
+         >
+            <h2>Daily Quote</h2>
+            <p id="quote-text"></p>
+        </section>
+
+        <section id="location" class="hidden">
+            <h2>Nearby Akshaya Centers</h2>
+            <div id="center-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Elderly Assistant</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
